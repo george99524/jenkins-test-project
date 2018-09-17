@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+	environment {
+		ENVIRONMENT: "PROD"
+	}
+	
     stages {
         stage('Checkout') {
             steps {
