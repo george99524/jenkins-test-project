@@ -4,14 +4,14 @@ pipeline {
 	environment {
 		ENVIRONMENT = "PROD"
 	}
-	
+
     stages {
         stage('Checkout') {
             steps {
                 echo 'Checking out the main repository'
-				checkout([$class: 'GitSCM', 
+				checkout([$class: 'GitSCM',
 						  branches: [[name: '*/master']],
-					 userRemoteConfigs: [[url: 'https://github.com/jpms-project/jenkins-test-project.git']]])
+					 userRemoteConfigs: [[url: 'https://github.com/george99524/jenkins-test-project.git']]])
             }
         }
         stage('Finished') {
